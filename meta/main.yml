@@ -1,0 +1,18 @@
+---
+galaxy_info:
+  author: Pawel Krupa
+  description: Keepalived daemon
+  company: Sointeractive
+  min_ansible_version: 1.9
+  platforms:
+   - name: EL
+     versions:
+       - all
+   - name: Ubuntu
+     versions:
+       - 16.04
+  galaxy_tags:
+   - keepalived
+   - vip
+   - floating ip
+
