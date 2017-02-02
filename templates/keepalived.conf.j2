@@ -9,11 +9,11 @@ vrrp_instance VIP_1 {
     state {{ keepalived_state }}
     interface {{ keepalived_iface }}
     virtual_router_id {{ keepalived_router_id }}
-    {% if keepalived_state.lower() == "master" %}
+{% if keepalived_state.lower() == "master" %}
     priority {{ keepalived_priority }}
-    {% else %}
+{% else %}
     priority {{ keepalived_backup_priority }}
-    {% endif %}   
+{% endif %}   
     advert_int 1
     authentication {
         auth_type PASS
