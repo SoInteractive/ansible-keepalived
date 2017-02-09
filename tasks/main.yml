@@ -4,7 +4,14 @@
     name: keepalived
     state: installed
   notify: restart keepalived
- 
+
+  
+  
+- name: Check if this if first host in group
+  set_fact:
+    keepalived_state: "MASTER"
+  run_once: true
+  
 - name: Configure keepalived
   template:
     src: keepalived.conf.j2
