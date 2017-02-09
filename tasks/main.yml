@@ -4,8 +4,6 @@
     name: keepalived
     state: installed
   notify: restart keepalived
-
-  
   
 - name: Check if this if first host in group
   set_fact:
@@ -21,4 +19,5 @@
 - name: Enable keepalived
   service:
     name: keepalived
+    state: started
     enabled: yes
