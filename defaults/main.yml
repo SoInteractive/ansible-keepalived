@@ -1,9 +1,11 @@
 ---
+keepalived_hosts_group: "loadbalancers"
+
 keepalived_auth_pass: "password"
 keepalived_router_id: "52"
 keepalived_iface: "{{ ansible_default_ipv4.interface }}"
 keepalived_vip: "192.168.123.123"
-keepalived_check_process: "keepalived"
+keepalived_check_process: "haproxy"
 keepalived_priority: "100"
 keepalived_backup_priority: "50"
 

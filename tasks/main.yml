@@ -9,6 +9,7 @@
   set_fact:
     keepalived_state: "MASTER"
   run_once: true
+  when: inventory_hostname == groups[keepalived_hosts_group][0]
   
 - name: Configure keepalived
   template:
