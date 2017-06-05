@@ -4,13 +4,13 @@
     name: keepalived
     state: installed
   notify: restart keepalived
-  
+
 - name: Check if this if first host in group
   set_fact:
     keepalived_state: "MASTER"
   run_once: true
   when: inventory_hostname == groups[keepalived_hosts_group][0]
-  
+
 - name: Configure keepalived
   template:
     src: keepalived.conf.j2
@@ -20,5 +20,4 @@
 - name: Enable keepalived
   service:
     name: keepalived
-    state: started
     enabled: yes
