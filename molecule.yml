@@ -8,8 +8,9 @@ verifier:
 docker:
   containers:
     - name: keepalived-xenial
-      image: ubuntu
-      image_version: xenial
+      image: solita/ubuntu-systemd
+      image_version: 16.04
+      privileged: true
     - name: keepalived-centos
       image: centos/systemd
       image_version: latest
