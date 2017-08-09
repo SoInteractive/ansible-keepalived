@@ -22,6 +22,7 @@ def test_service(Service):
         for service in present:
             s = Service(service)
             assert s.is_enabled
+            assert s.is_running
 
 
 def test_packages(Package):
