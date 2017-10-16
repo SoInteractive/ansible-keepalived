@@ -11,6 +11,6 @@
 
 - hosts: all
   roles:
-    - keepalived
+    - ansible-keepalived
   vars:
     keepalived_hosts_group: all
