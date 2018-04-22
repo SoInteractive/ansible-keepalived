@@ -7,6 +7,10 @@ Ansible Role: keepalived
 
 Role will install and configure keepalived daemon used for automated Virtual IP address supervision
 
+# :warning: IMPORTANT NOTICE
+
+THIS PROJECT IS ABANDONED. WE DO NOT ACCEPT ANY NEW ISSUES AND/OR PULL REQUESTS.
+
 Example usage
 -------------
 
